@@ -10,6 +10,7 @@ import com.sevsu.model.Specialization;
 import com.sevsu.model.User;
 import com.sevsu.util.PasswordHash;
 import org.joda.time.DateTime;
+import org.joda.time.LocalDateTime;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -255,10 +256,10 @@ public class TestServlet extends HttpServlet {
         enrollee1.setLastName("Saprykin");
         enrollee1.setAddress("sffsdf, 3wfv, 34");
         enrollee1.setAppliedAcademicDegree("master's");
-        enrollee1.setBirthDate(DateTime.now());
+        enrollee1.setBirthDate(LocalDateTime.now());
         enrollee1.setEducationForm("day");
         enrollee1.setPreviousEducation("school #32");
-        enrollee1.setPreviousEducationYear(DateTime.now().minusYears(1).minusMonths(6));
+        enrollee1.setPreviousEducationYear(LocalDateTime.now().minusYears(1).minusMonths(6));
 
         HashSet<Specialization> set = new HashSet<>();
         set.add(specialization1);
