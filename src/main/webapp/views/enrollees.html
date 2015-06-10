@@ -1,0 +1,61 @@
+<div id="authorized-content" hidden>
+    <div style="
+    /*height: 100px;*/
+    margin: auto;
+    width: 400px;">
+
+        <h2>All Enrollees
+            <a class="btn btn-primary pull-right" href="#/create">
+                <i class="icon-plus-sign icon-white"></i>
+                New enrollee
+            </a>
+        </h2>
+
+        <div class="container">
+            <table class="table table-hover">
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>
+                        Имя
+                    </th>
+                    <th>
+                        Фамилия
+                    </th>
+                    <th>
+                        Дата рождения
+                    </th>
+                </tr>
+
+                <tr ng-repeat="enrollee in enrollees">
+                    <td>{{$index+1}}</td>
+                    <td>
+                        {{enrollee.firstName}}
+                    </td>
+                    <td>
+                        {{enrollee.lastName}}
+                    </td>
+                    <td>
+                        {{enrollee.birthDate | date: 'medium'}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div style="margin-top:60px; text-align: center;" id="not-authorized-content" hidden>
+    <span style="font-size: 200px; color:#373737; "></span>
+    <h1>Access denied</h1>
+    <h2>Please <a href="http://abiturient-sevgu.rhcloud.com/#/login">log-in</a>.</h2>
+</div>
+
+
+
+
+
