@@ -43,7 +43,7 @@ controllers.EnrolleesController = function ($scope, $http) {
                 var unauthorized = status == 401;
                 if (unauthorized) {
                     document.getElementById('not-authorized-content').hidden = false;
-                    var htmlMessage = "<h2>Please <a href=\"http://abiturient-sevgu.rhcloud.com/#/login\">log-in</a></h2>";
+                    var htmlMessage = "<h2>Please <a href=\"http://abiturient-sevsu.rhcloud.com/#/login\">log-in</a></h2>";
                     swal({
                             title: "Access denied",
                             text: "Please log-in",
@@ -58,7 +58,7 @@ controllers.EnrolleesController = function ($scope, $http) {
                         },
                         function (isConfirm) {
                             if (isConfirm) {
-                                location.href = "http://abiturient-sevgu.rhcloud.com/#/login";
+                                location.href = "http://abiturient-sevsu.rhcloud.com/#/login";
                                 //swal("Deleted!", "Your imaginary file has been deleted.", "success");
                             } /*else {
                                 swal("Cancelled", "Your imaginary file is safe :)", "error");
@@ -99,7 +99,7 @@ controllers.LoginController = function ($scope, $http) {
         };
         var res = $http.post('/login', dataObj);
         res.success(function (data, status, headers, config) {
-            location.href = "http://abiturient-sevgu.rhcloud.com/#/user/enrollees";
+            location.href = "http://abiturient-sevsu.rhcloud.com/#/user/enrollees";
             //swal("Success!", "Now you are logged in! " + JSON.stringify(data), "success");*/
         });
         res.error(function (data, status, headers, config) {

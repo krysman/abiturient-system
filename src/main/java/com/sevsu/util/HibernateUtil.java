@@ -23,8 +23,8 @@ public class HibernateUtil {
         //String JDBC_DRIVER = "com.mysql.jdbc.Driver";
 
         //  Database credentials
-        String username = "adminkuhEdFI";
-        String password = "rFNmaPZZhjRS";
+        String username = "adminK2Wmzkd";
+        String password = "CJyS_qzVS4YI";
 
         // TODO add auto-reconnect=true
         Configuration config = new Configuration()
